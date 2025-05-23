@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Syed Maaz - Digital Marketer, SEO Specialist, and Content Creator" />
+  <meta name="keywords" content="Digital Marketing, SEO, Social Media, Portfolio, Syed Maaz" />
+  <meta name="author" content="Syed Maaz" />
+  <title>Syed Maaz | Digital Marketer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #1a73e8;
+      --primary-dark: #1558c0;
+      --header-gradient: linear-gradient(to right, #1a73e8, #4285f4);
+      --text-main: #333;
+      --text-secondary: #555;
+      --bg-main: #f7f9fc;
+      --bg-white: #fff;
+      --accent: #e0e0e0;
+      --border: #ddd;
+      --shadow: 0 2px 8px rgba(0,0,0,0.05);
+      --radius: 6px;
+      --transition: 0.3s;
+      --max-width: 960px;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Inter', Arial, sans-serif;
+      background: var(--bg-main);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: var(--header-gradient);
+      color: white;
+      padding: 80px 20px 60px 20px;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.2rem;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: var(--accent);
+      margin-bottom: 20px;
+    }
+    nav {
+      background-color: var(--bg-white);
+      padding: 10px 20px;
+      box-shadow: var(--shadow);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      transition: top 0.3s;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+    nav a {
+      text-decoration: none;
+      color: var(--text-main);
+      font-weight: 600;
+      padding: 8px 14px;
+      border-radius: var(--radius);
+      transition: background var(--transition), color var(--transition);
+    }
+    nav a:hover, nav a.active {
+      background: var(--primary);
+      color: #fff;
+    }
+    section {
+      max-width: var(--max-width);
+      margin: 60px auto;
+      padding: 0 20px;
+      background: var(--bg-white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      margin-bottom: 40px;
+    }
+    h2 {
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 20px;
+      font-family: 'Playfair Display', serif;
+    }
+    .about p, .skills ul, .contact p {
+      font-size: 1.07rem;
+      line-height: 1.7;
+      color: var(--text-secondary);
+    }
+    .skills ul {
+      list-style: square inside;
+      margin-left: 10px;
+    }
+    .button {
+      display: inline-block;
+      padding: 12px 28px;
+      background: var(--primary);
+      color: #fff;
+      text-decoration: none;
+      border-radius: var(--radius);
+      margin-top: 22px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      box-shadow: 0 4px 16px rgba(26,115,232,0.08);
+      transition: background var(--transition), transform var(--transition);
+    }
+    .button:focus,
+    .button:hover {
+      background: var(--primary-dark);
+      outline: none;
+      transform: translateY(-2px) scale(1.04);
+    }
+    .contact a {
+      color: var(--primary);
+      text-decoration: underline;
+      word-break: break-all;
+      transition: color var(--transition);
+    }
+    .contact a:focus,
+    .contact a:hover {
+      color: var(--primary-dark);
+      text-decoration: none;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: var(--bg-white);
+      border-top: 1px solid var(--border);
+      color: #999;
+      font-size: 0.97rem;
+      margin-top: auto;
+    }
+    /* Accessibility and usability improvements */
+    a:focus-visible {
+      outline: 2px dashed var(--primary);
+      outline-offset: 2px;
+    }
+    /* Responsive design */
+    @media (max-width: 900px) {
+      section {
+        margin: 40px 8px;
+      }
+    }
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.1rem;
+      }
+      nav ul {
+        flex-direction: column;
+        gap: 12px;
+      }
+      section {
+        margin: 28px 5px;
+        padding: 16px 10px;
+      }
+    }
+    @media (max-width: 480px) {
+      header {
+        padding: 45px 5px 30px 5px;
+      }
+      section {
+        padding: 12px 2px;
+      }
+      footer {
+        font-size: 0.88rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav aria-label="Primary Navigation">
+    <ul>
+      <li><a href="#about" id="nav-about">About</a></li>
+      <li><a href="#skills" id="nav-skills">Skills</a></li>
+      <li><a href="#contact" id="nav-contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Hi, I'm Syed Maaz</h1>
+    <p>Digital Marketer | SEO Specialist | Growth Hacker</p>
+    <a href="#contact" class="button" aria-label="Hire Me, Go to Contact section">Hire Me</a>
+  </header>
+
+  <main>
+    <section id="about" class="about" tabindex="-1" aria-labelledby="about-heading">
+      <h2 id="about-heading">About Me</h2>
+      <p>
+        I'm passionate about helping brands grow through SEO and data-driven digital marketing. This personal site showcases my learning journey, practical SEO work, and portfolio for future roles in the marketing industry.
+      </p>
+    </section>
+
+    <section id="skills" class="skills" tabindex="-1" aria-labelledby="skills-heading">
+      <h2 id="skills-heading">Skills &amp; Tools</h2>
+      <ul>
+        <li>SEO (On-Page, Off-Page, Technical)</li>
+        <li>Keyword Research &amp; Blogging</li>
+        <li>Social Media Strategy</li>
+        <li>WordPress &amp; HTML/CSS</li>
+        <li>Canva, Google Analytics, Search Console</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="contact" tabindex="-1" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact Me</h2>
+      <p>Email: <a href="mailto:syed.maaz@email.com" rel="noopener">syed.maaz@email.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/syedmaaz-marketing/" target="_blank" rel="noopener">linkedin.com/in/syedmaaz-marketing</a></p>
+      <p>GitHub: <a href="https://github.com/syed9901" target="_blank" rel="noopener">github.com/syed9901</a></p>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Syed Maaz. Built with <span aria-label="love" role="img">❤️</span> and HTML.
+  </footer>
+
+  <script>
+    // Highlight nav links on scroll
+    document.addEventListener('DOMContentLoaded', function() {
+      const sections = document.querySelectorAll('section');
+      const navLinks = {
+        about: document.getElementById('nav-about'),
+        skills: document.getElementById('nav-skills'),
+        contact: document.getElementById('nav-contact')
+      };
+
+      function activateLink() {
+        let index = sections.length;
+        while(--index && window.scrollY + 60 < sections[index].offsetTop) {}
+        Object.keys(navLinks).forEach(key => navLinks[key].classList.remove('active'));
+        if (sections[index]) {
+          navLinks[sections[index].id].classList.add('active');
+        }
+      }
+
+      window.addEventListener('scroll', activateLink);
+      activateLink();
+
+      // Smooth scroll and focus for accessibility
+      document.querySelectorAll('nav a, .button').forEach(link => {
+        link.addEventListener('click', function(e) {
+          const href = this.getAttribute('href');
+          if (href && href.startsWith('#')) {
+            const target = document.querySelector(href);
+            if (target) {
+              e.preventDefault();
+              target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              setTimeout(() => { target.focus(); }, 600);
+            }
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
